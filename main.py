@@ -9,12 +9,11 @@ from firebase_admin import credentials, firestore
 
 # --- CONFIGURATION ---
 # On Railway, these will be set as environment variables.
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+TELEGRAM_BOT_TOKEN = os.environ.get("8432697262:AAERRuVpN5l8jBCc38dq3H6nG6Z7tw_H4rc")
 FIREBASE_APP_ID = "msgc-power-store" 
 # Get Firebase credentials from environment variable
 FIREBASE_CREDENTIALS_JSON = os.environ.get("FIREBASE_CREDENTIALS_JSON")
 
-# --- SETUP ---
 
 # Enable logging
 logging.basicConfig(
@@ -130,3 +129,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
