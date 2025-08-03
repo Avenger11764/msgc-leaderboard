@@ -9,8 +9,6 @@ from firebase_admin import credentials, firestore
 
 # --- CONFIGURATION ---
 # On Railway, these will be set as environment variables.
-# --- CONFIGURATION ---
-# On Railway, these will be set as environment variables.
 TELEGRAM_BOT_TOKEN = "8432697262:AAERRuVpN5l8jBCc38dq3H6nG6Z7tw_H4rc"
 FIREBASE_APP_ID = "msgc-power-store" 
 # Get Firebase credentials from environment variable
@@ -29,7 +27,6 @@ FIREBASE_CREDENTIALS_JSON = {
 }
 
 
-
 # Enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -46,8 +43,7 @@ try:
         exit()
 
     # Load credentials from the JSON string in the environment variable
-    cred_dict = json.loads(FIREBASE_CREDENTIALS_JSON)
-    cred = credentials.Certificate(cred_dict)
+    cred = credentials.Certificate(FIREBASE_CREDENTIALS_JSON)
     
     if not firebase_admin._apps:
         firebase_admin.initialize_app(cred)
